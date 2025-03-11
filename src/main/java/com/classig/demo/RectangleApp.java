@@ -11,11 +11,18 @@ public class RectangleApp extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(RectangleApp.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 517, 236);
-        stage.setTitle("Rectangle");
+        stage.setTitle("Rectangle"); // имя главного окна
         stage.setScene(scene);
         stage.show();
     }
 
+    /**
+     * точка входа
+     * public - позволяет вызывать метод из за пределов класса
+     * static - позволяет вызывать метод без создания объекта
+     * launch() - метод для запуска приложения
+     * @param args позволяет вызывать процедуру с несколькими аргументами
+     */
     public static void main(String[] args) {
         launch();
     }
