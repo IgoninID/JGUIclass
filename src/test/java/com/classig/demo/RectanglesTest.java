@@ -35,9 +35,9 @@ class RectanglesTest {
     {
         rec.setallsides(5, 8);
         assertEquals(5, rec.getSide1());
-        assertThrows(RuntimeException.class, () -> rec.setallsides(0, 0));
+        assertThrows(RuntimeException.class, () -> rec.setallsides(1, 1));
         assertEquals(8, rec.getSide2());
-        assertThrows(RuntimeException.class, () -> rec.setallsides(0, 0));
+        assertThrows(RuntimeException.class, () -> rec.setallsides(1, 1));
     }
 
     @Test
