@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="236.0" prefWidth="517.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.classig.demo.RectangleController">
    <children>
-       <Button fx:id="CalcButton" layoutX="238.0" layoutY="96.0" onAction="#onHelloButtonClick" text="Calc">
+       <Button fx:id="CalcButton" layoutX="238.0" layoutY="96.0" onAction="#onCalcButtonClick" text="Calc">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>

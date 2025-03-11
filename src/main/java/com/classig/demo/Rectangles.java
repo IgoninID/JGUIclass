@@ -23,6 +23,7 @@ public class Rectangles
 
     /**
      * метод set для длины
+     * @param length длина
      */
     private void setSide1(double length)
     {
@@ -31,6 +32,7 @@ public class Rectangles
 
     /**
      * метод set для ширины
+     * @param length ширина
      */
     private void setSide2(double length)
     {
@@ -47,8 +49,8 @@ public class Rectangles
 
     /**
      * конструктор с параметрами
-     * side1 - длина
-     * side2 - ширина
+     * @param side1 длина
+     * @param side2 ширина
      */
     public Rectangles(double side1, double side2)
     {
@@ -62,9 +64,9 @@ public class Rectangles
 
     /**
      * метод set для 2 полей: длина и ширина
-     * length_s1 - длина
-     * length_s2 - ширина
      * правило ввода: длина и ширина не могут быть меньше 0
+     * @param length_s1 - длина
+     * @param length_s2 - ширина
      */
     public void setallsides(double length_s1, double length_s2)
     {
@@ -81,7 +83,7 @@ public class Rectangles
 
     /**
      * метод get для длины
-     * возвращает значение длины прямоугольника
+     * @return значение длины прямоугольника
      */
     public double getSide1()
     {
@@ -90,7 +92,7 @@ public class Rectangles
 
     /**
      * метод get для ширины
-     * возвращает значение ширины прямоугольника
+     * @return значение ширины прямоугольника
      */
     public double getSide2()
     {
@@ -99,7 +101,7 @@ public class Rectangles
 
     /**
      * метод вычисления периметра
-     * возвращает периметр прямоугольника
+     * @return периметр прямоугольника
      */
     public double calcperim()
     {
@@ -108,7 +110,7 @@ public class Rectangles
 
     /**
      * метод вычисления площади
-     * возвращает площадь прямоугольника
+     * @return площадь прямоугольника
      */
     public double calcarea()
     {
@@ -117,14 +119,14 @@ public class Rectangles
 
     /**
      * переопределенный метод toString
-     * возвращает строку с информацией о прямоугольнике: длины сторон, периметр и площадь
+     * @return строка с информацией о прямоугольнике: длины сторон, периметр и площадь
      */
     @Override
     public String toString() {
         return "Sides: " + Side1 + " ; " +
                 + Side2 + " ; " +
                 + Side1 + " ; " +
-                + Side2 + " ; " +
+                + Side2 + "\n" +
                 "Perim: " + calcperim() + "\n" +
                 "Area: " + calcarea();
     }

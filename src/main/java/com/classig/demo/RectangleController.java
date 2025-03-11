@@ -18,7 +18,7 @@ public class RectangleController {
     Rectangles Rec = new Rectangles();
 
     @FXML
-    protected void onHelloButtonClick()
+    protected void onCalcButtonClick()
     {
 
             try
