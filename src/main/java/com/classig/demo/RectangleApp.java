@@ -7,12 +7,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class RectangleApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 560, 480);
-        stage.setTitle("Hello!");
+        FXMLLoader fxmlLoader = new FXMLLoader(RectangleApp.class.getResource("hello-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 517, 236);
+        stage.setTitle("Rectangle");
         stage.setScene(scene);
         stage.show();
     }

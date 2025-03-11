@@ -1,30 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<VBox alignment="CENTER" prefHeight="458.0" prefWidth="610.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.classig.demo.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
-   <AnchorPane prefHeight="477.0" prefWidth="689.0">
-      <children>
-          <Button fx:id="CalcButton" layoutX="262.0" layoutY="197.0" onAction="#onHelloButtonClick" text="Calc">
-            <opaqueInsets>
-               <Insets />
-            </opaqueInsets>
-         </Button>
-      
-          <Label fx:id="welcomeText" layoutX="134.0" layoutY="23.0" prefHeight="36.0" prefWidth="293.0" text="Вычисление площади и периметра прямоугольника" />
-         <TextField fx:id="PerimText" editable="false" layoutX="14.0" layoutY="273.0" prefHeight="25.0" prefWidth="184.0" />
-         <TextField fx:id="AreaText" editable="false" layoutX="372.0" layoutY="273.0" prefHeight="25.0" prefWidth="184.0" />
-         <Label fx:id="welcomeText1" layoutX="27.0" layoutY="234.0" prefHeight="36.0" prefWidth="158.0" text="Периметр:" />
-         <Label fx:id="welcomeText2" layoutX="372.0" layoutY="234.0" prefHeight="36.0" prefWidth="158.0" text="Площадь:" />
-         <TextField fx:id="Side1Text" layoutX="32.0" layoutY="96.0" />
-         <TextField fx:id="Side2Text" layoutX="377.0" layoutY="96.0" />
-         <Label fx:id="welcomeText4" layoutX="32.0" layoutY="60.0" prefHeight="36.0" prefWidth="158.0" text="Длина:" />
-         <Label fx:id="welcomeText3" layoutX="373.0" layoutY="60.0" prefHeight="36.0" prefWidth="158.0" text="Ширина:" />
-      </children>
-   </AnchorPane>
-</VBox>
+
+<AnchorPane prefHeight="236.0" prefWidth="517.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.classig.demo.RectangleController">
+   <children>
+       <Button fx:id="CalcButton" layoutX="238.0" layoutY="96.0" onAction="#onHelloButtonClick" text="Calc">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+   
+                <Label fx:id="welcomeText" layoutX="110.0" layoutY="24.0" prefHeight="36.0" prefWidth="293.0" text="Вычисление площади и периметра прямоугольника" />
+      <TextField fx:id="PerimText" editable="false" layoutX="200.0" layoutY="169.0" prefHeight="25.0" prefWidth="118.0" />
+      <TextField fx:id="AreaText" editable="false" layoutX="200.0" layoutY="139.0" prefHeight="25.0" prefWidth="118.0" />
+      <Label fx:id="welcomeText1" layoutX="134.0" layoutY="164.0" prefHeight="36.0" prefWidth="62.0" text="Периметр:" />
+      <Label fx:id="welcomeText2" layoutX="134.0" layoutY="133.0" prefHeight="36.0" prefWidth="62.0" text="Площадь:" />
+      <TextField fx:id="Side1Text" layoutX="36.0" layoutY="96.0" />
+      <TextField fx:id="Side2Text" layoutX="337.0" layoutY="96.0" />
+      <Label fx:id="welcomeText4" layoutX="36.0" layoutY="60.0" prefHeight="36.0" prefWidth="149.0" text="Длина:" />
+      <Label fx:id="welcomeText3" layoutX="337.0" layoutY="60.0" prefHeight="36.0" prefWidth="149.0" text="Ширина:" />
+   </children>
+</AnchorPane>

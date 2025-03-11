@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
 
-public class HelloController {
+public class RectangleController {
 
     @FXML
     public TextField Side1Text;
@@ -15,6 +15,8 @@ public class HelloController {
     @FXML
     public TextField AreaText;
 
+    Rectangles Rec = new Rectangles();
+
     @FXML
     protected void onHelloButtonClick()
     {
@@ -23,7 +25,7 @@ public class HelloController {
             {
                 Side1Text.setStyle("-fx-background-color: white;");
                 Side2Text.setStyle("-fx-background-color: white;");
-                Rectangles Rec = new Rectangles(Double.parseDouble(Side1Text.getText()), Double.parseDouble(Side2Text.getText()));
+                Rec.setallsides(Double.parseDouble(Side1Text.getText()), Double.parseDouble(Side2Text.getText()));
                 PerimText.setText(Double.toString(Rec.calcperim()));
                 AreaText.setText(Double.toString(Rec.calcarea()));
             }
