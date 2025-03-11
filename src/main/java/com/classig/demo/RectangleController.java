@@ -34,5 +34,10 @@ public class RectangleController {
                 Side1Text.setStyle("-fx-background-color: pink;");
                 Side2Text.setStyle("-fx-background-color: pink;");
             }
+            catch (RuntimeException ex)
+            {
+                Side1Text.setStyle("-fx-background-color: pink;");
+                Side2Text.setStyle("-fx-background-color: pink;");
+            }
     }
 }
