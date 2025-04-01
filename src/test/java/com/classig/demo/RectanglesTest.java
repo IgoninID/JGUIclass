@@ -62,8 +62,11 @@ class RectanglesTest {
         // assertThrows - проверяет выброшенное исключение (ожидаемый тип исключения, код выполняемый c вызовом исключения)
         assertEquals(5, rec.getSide1());
         assertEquals(8, rec.getSide2());
+        rec.setallsides(10, 11);
+        assertEquals(10, rec.getSide1());
+        assertEquals(11, rec.getSide2());
         assertThrows(RuntimeException.class, () -> rec.setallsides(0, 0));
-        assertThrows(RuntimeException.class, () -> rec.setallsides(-4, -5));
+        assertThrows(RuntimeException.class, () -> rec.setallsides(-4,  -5));
     }
 
     /**

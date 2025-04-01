@@ -6,10 +6,16 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 
+// классы в java - ссылочные типы (указатель на объект, сам объект не создается при объявлении)
+// все классы java наследуются от класса object
+
+/**
+ * Класс приложения наследуется от класса приложение из javafx
+ */
 public class RectangleApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(RectangleApp.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(RectangleApp.class.getResource("rectangle-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 517, 236);
         stage.setTitle("Rectangle"); // имя главного окна
         stage.setScene(scene);

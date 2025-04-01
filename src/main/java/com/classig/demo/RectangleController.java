@@ -3,7 +3,9 @@ package com.classig.demo;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
-
+/**
+ * Контроллер для окна
+ */
 public class RectangleController {
 
     /**
@@ -33,7 +35,7 @@ public class RectangleController {
     /**
      * Создаем объект класса Rectangle
      */
-    Rectangles Rec = new Rectangles();
+    public Rectangles Rec = new Rectangles();
 
     /**
      * Обработчик события при нажатии на кнопку Calc
@@ -41,23 +43,39 @@ public class RectangleController {
     @FXML
     protected void onCalcButtonClick()
     {
-            try
-            {
-                Side1Text.setStyle("-fx-background-color: white;"); // меняе цвет полей на белый
-                Side2Text.setStyle("-fx-background-color: white;");
-                Rec.setallsides(Double.parseDouble(Side1Text.getText()), Double.parseDouble(Side2Text.getText()));
-                PerimText.setText(Double.toString(Rec.calcperim()));
-                AreaText.setText(Double.toString(Rec.calcarea()));
-            }
-            catch (NumberFormatException ex) // если невозможно преобразовать символ в поле в число double
-            {
-                Side1Text.setStyle("-fx-background-color: pink;"); // меняе цвет полей на розовый
-                Side2Text.setStyle("-fx-background-color: pink;");
-            }
-            catch (RuntimeException ex) // если пользователь ввел отрицательное число или 0
-            {
-                Side1Text.setStyle("-fx-background-color: pink;"); // меняе цвет полей на розовый
-                Side2Text.setStyle("-fx-background-color: pink;");
-            }
+        Side1Text.setStyle("-fx-background-color: white;"); // меняем цвет полей на белый
+        Side2Text.setStyle("-fx-background-color: white;");
+        Double side1 = 1.0; // длина
+        Double side2 = 1.0; // ширина
+        try
+        {
+            side1 = Double.parseDouble(Side1Text.getText()); // пробуем преобразовать введенную пользователем длину
+        }
+        catch (NumberFormatException ex) // если невозможно преобразовать символ в поле в число double
+        {
+            Side1Text.setStyle("-fx-background-color: pink;"); // меняем цвет полей на розовый
+            return;
+        }
+        try
+        {
+            side2 = Double.parseDouble(Side2Text.getText()); // пробуем преобразовать введенную пользователем ширину
+        }
+        catch (NumberFormatException ex)
+        {
+            Side2Text.setStyle("-fx-background-color: pink;"); // меняем цвет полей на розовый
+            return;
+        }
+        try
+        {
+            Rec.setallsides(side1, side2); // пробуем создать прямоугольник с введенными сторонами
+        }
+        catch (RuntimeException ex) // если пользователь ввел отрицательное число или 0
+        {
+            Side1Text.setStyle("-fx-background-color: red;"); // меняем цвет полей на красный
+            Side2Text.setStyle("-fx-background-color: red;");
+            return;
+        }
+        PerimText.setText(Double.toString(Rec.calcperim())); //
+        AreaText.setText(Double.toString(Rec.calcarea())); //
     }
 }

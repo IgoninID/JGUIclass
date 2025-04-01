@@ -8,6 +8,7 @@ package com.classig.demo;
  *         конструктор с параметрами и без
  *         вычисление периметра и площади
  *         переопределенный метод toString
+ *
  */
 public class Rectangles
 {
