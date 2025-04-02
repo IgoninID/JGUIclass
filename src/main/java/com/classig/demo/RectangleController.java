@@ -43,8 +43,12 @@ public class RectangleController {
     @FXML
     protected void onCalcButtonClick()
     {
-        Side1Text.setStyle("-fx-background-color: white;"); // меняем цвет полей на белый
-        Side2Text.setStyle("-fx-background-color: white;");
+        final String noerr = "-fx-background-color: white;"; // цвет поля по умолчанию без ошибок
+        final String errnonum = "-fx-background-color: pink;"; // цвет поля для невозможности преобразования введенного значения
+        final String errzeroorminus = "-fx-background-color: red;"; // цвет поля для отрицательного или нулевого введенного числа
+
+        Side1Text.setStyle(noerr); // меняем цвет полей на белый
+        Side2Text.setStyle(noerr);
         Double side1 = 1.0; // длина
         Double side2 = 1.0; // ширина
         try
@@ -53,7 +57,7 @@ public class RectangleController {
         }
         catch (NumberFormatException ex) // если невозможно преобразовать символ в поле в число double
         {
-            Side1Text.setStyle("-fx-background-color: pink;"); // меняем цвет полей на розовый
+            Side1Text.setStyle(errnonum); // меняем цвет полей на розовый
             return;
         }
         try
@@ -62,7 +66,7 @@ public class RectangleController {
         }
         catch (NumberFormatException ex)
         {
-            Side2Text.setStyle("-fx-background-color: pink;"); // меняем цвет полей на розовый
+            Side2Text.setStyle(errnonum); // меняем цвет полей на розовый
             return;
         }
         try
@@ -71,8 +75,8 @@ public class RectangleController {
         }
         catch (RuntimeException ex) // если пользователь ввел отрицательное число или 0
         {
-            Side1Text.setStyle("-fx-background-color: red;"); // меняем цвет полей на красный
-            Side2Text.setStyle("-fx-background-color: red;");
+            Side1Text.setStyle(errzeroorminus); // меняем цвет полей на красный
+            Side2Text.setStyle(errzeroorminus);
             return;
         }
         PerimText.setText(Double.toString(Rec.calcperim())); // вывод периметра
