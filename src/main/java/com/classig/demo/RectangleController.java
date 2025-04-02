@@ -75,7 +75,7 @@ public class RectangleController {
             Side2Text.setStyle("-fx-background-color: red;");
             return;
         }
-        PerimText.setText(Double.toString(Rec.calcperim())); //
-        AreaText.setText(Double.toString(Rec.calcarea())); //
+        PerimText.setText(Double.toString(Rec.calcperim())); // вывод периметра
+        AreaText.setText(Double.toString(Rec.calcarea())); // вывод площади
     }
 }
